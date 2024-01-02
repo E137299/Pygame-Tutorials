@@ -40,7 +40,7 @@ pygame.draw.circle(circle_surface, (255, 0, 0, 128), (circle_radius, circle_radi
 '''
 Create a surface displaying an image
 '''
-mario_surface = pygame.image.load("mario.png")
+mario_surface = pygame.image.load("mario.png").convert_alpha()
 
 
 '''
@@ -49,6 +49,7 @@ Create a surface displaying text
 # Create font
 font = pygame.font.Font(None,100)
 text_surface = font.render("Text Surface", False,"Green")
+# text_surface.fill("Pink")
 
 
 
