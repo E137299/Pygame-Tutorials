@@ -27,6 +27,15 @@ color_surface = pygame.Surface((200,200))
 # color_surface.fill((120,120,240)) # assign a tuple containing RGB values
 color_surface.fill("#EE30FF") # assign a hexidecimal color value
 
+'''
+Create a circular surface 
+'''
+circle_radius = 75
+circle_surface = pygame.Surface((circle_radius * 2, circle_radius * 2), pygame.SRCALPHA) # creates a rectangular surface
+# circle_surface.fill("Black")
+pygame.draw.circle(circle_surface, (255, 0, 0, 128), (circle_radius, circle_radius), circle_radius) # draws circle on surface
+
+
 
 '''
 Create a surface displaying an image
@@ -55,6 +64,7 @@ while running:
     screen.blit(color_surface, (50,50))
     screen.blit(mario_surface,(300,50))
     screen.blit(text_surface,(50,400))
+    screen.blit(circle_surface,(550,350))
     pygame.display.flip()
     clock.tick(60)
 
