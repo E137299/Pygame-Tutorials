@@ -19,9 +19,9 @@ class Jelly(pygame.sprite.Sprite):
         self.deltay = random.choice([-1,1])
 
     def move(self, count):
-        if self.rect.left <= 0 or self.rect.right >= 800:
+        if self.rect.left <= -0 or self.rect.right >= 800:
             self.deltax *= -1
-        if self.rect.top <= 0 or self.rect.bottom >= 600:
+        if self.rect.top <= -100 or self.rect.bottom >= 600:
             self.deltay *= -1
 
         self.rect.centerx += self.deltax
