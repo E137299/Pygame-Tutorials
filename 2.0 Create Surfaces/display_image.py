@@ -40,7 +40,7 @@ pygame.draw.circle(circle_surface, (255, 0, 0, 128), (circle_radius, circle_radi
 '''
 Create a surface displaying an image
 '''
-mario_surface = pygame.image.load("mario.png").convert_alpha()
+mario_surface = pygame.image.load("2.0 Create Surfaces/mario.png").convert_alpha()
 
 
 '''
