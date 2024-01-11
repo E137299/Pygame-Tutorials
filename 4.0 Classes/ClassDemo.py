@@ -7,15 +7,14 @@ Any pygame program that you create will have this basic code
 import pygame, sys, random
 
 class Jelly(pygame.sprite.Sprite):
-    def __init__(self, num, x, y):
+    def __init__(self, number, x, y):
         super(Jelly, self).__init__()
-        self.id = num
+        self.id = number
         self.index = 0
         self.files = ["4.0 Classes/jelly1.png","4.0 Classes/jelly2.png","4.0 Classes/jelly3.png"]
         self.images = [pygame.image.load(filename).convert_alpha() for filename in self.files]
         self.image = self.images[self.index]
         self.rect = self.image.get_rect(center = (x,y))
-
         self.deltax = random.choice([-2,-1,1,2])
         self.deltay = random.choice([-2,-1,1,2])
 
