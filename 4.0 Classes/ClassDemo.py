@@ -16,22 +16,14 @@ class Jelly(pygame.sprite.Sprite):
         self.image = self.images[self.index]
         self.rect = self.image.get_rect(center = (x,y))
 
-        self.deltax = random.choice([-1,1])
-        self.deltay = random.choice([-1,1])
+        self.deltax = random.choice([-2,-1,1,2])
+        self.deltay = random.choice([-2,-1,1,2])
 
     def move(self, count):
         if self.rect.left <= -0 or self.rect.right >= 800:
             self.deltax *= -1
         if self.rect.top <= -100 or self.rect.bottom >= 600:
             self.deltay *= -1
-
-        for other in jellyfish:
-            if jelly != other and jelly.rect.colliderect(other.rect):
-                print("Before:",jelly.deltax,jelly.deltay)
-                jelly.deltax *= -1
-                print("After:",jelly.deltax,jelly.deltay)
-                while jelly.rect.colliderect(other.rect):
-                    self.rect.centerx += self.deltax
                     
 
         self.rect.centerx += self.deltax
