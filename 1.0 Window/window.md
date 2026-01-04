@@ -25,10 +25,6 @@ A conditional statement inside a Pygame event loop. It checks whether the curren
 In Pygame, pygame.QUIT is an event type that occurs when the user attempts to close the game window by clicking the close button in the window's title bar.
 
 <br></br>
-#### <span style="color:red;">if event.type == pygame.QUIT:</span>
-In Pygame, when you make changes to what is shown on the screen (drawing shapes, updating positions of game elements, etc.), those changes are made to a portion of the computer's memory that represents the display. However, these changes are not immediately shown on the actual screen. The flip() function updates the entire display with all the changes that have been made since the last flip.
-
-<br></br>
 #### <span style="color:red;">screen.fill(WHITE)</span>
 Sets the background color of the window
 

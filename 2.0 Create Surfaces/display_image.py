@@ -23,9 +23,9 @@ clock = pygame.time.Clock()
 Create a surface displaying a color
 '''
 color_surface = pygame.Surface((200,200))
-# color_surface.fill("pink") #assign color to surface with the name of a color in a catalog
+color_surface.fill("pink") #assign color to surface with the name of a color in a catalog
 # color_surface.fill((120,120,240)) # assign a tuple containing RGB values
-color_surface.fill("#EE30FF") # assign a hexidecimal color value
+# color_surface.fill("#EE30FF") # assign a hexidecimal color value
 
 '''
 Create a circular surface 

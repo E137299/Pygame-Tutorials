@@ -30,10 +30,16 @@ red_y = 0 #coordinate of the top side of circle
 '''
 ANIMATION: Option 2
 '''
-circle_radius = 75
 blue_circle = pygame.Surface((circle_radius * 2, circle_radius * 2), pygame.SRCALPHA) # creates a rectangular surface
 pygame.draw.circle(blue_circle, (0, 0, 255,128),(circle_radius, circle_radius), circle_radius) # draws circle on surface
 blue_rect = blue_circle.get_rect(center = (300,300))
+
+'''
+ANIMATION: Option 3
+'''
+green_circle = pygame.Surface((circle_radius * 2, circle_radius * 2), pygame.SRCALPHA) # creates a rectangular surface
+pygame.draw.circle(green_circle, (0, 255, 0,128),(circle_radius, circle_radius), circle_radius) # draws circle on surface
+green_rect = green_circle.get_rect(center = (400,400))
 
 running = True
 while running:
@@ -51,10 +57,14 @@ while running:
     blue_rect.centerx += random.randint(-1,1)
     blue_rect.centery += random.randint(-1, 1)
 
+    #ANIMATION: Option 3
+    green_rect.move_ip(0,1)
+
 
     #Blit images onto screen
     screen.blit(red_circle,(red_x,red_y))
     screen.blit(blue_circle, blue_rect)
+    screen.blit(green_circle, green_rect)
 
 
     pygame.display.flip()
